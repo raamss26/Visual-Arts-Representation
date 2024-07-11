@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visual Arts Collection</title>
+</head>
+<body>
+    <h1>Visual Arts Collection</h1>
+
+    <h2>Artworks:</h2>
+    <ul>
+        {% for art in arts %}
+        <li>
+            <h3>{{ art.title }}</h3>
+            <p>Artist: {{ art.artist }}</p>
+            <img src="{{ art.image_url }}" alt="{{ art.title }}" width="300">
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add New Artwork:</h2>
+    <a href="/add_art">Add Artwork</a>
+</body>
+</html>
